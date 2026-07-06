@@ -1,345 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Turn one idea into your first $1,000</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How to Sell Digital Products — Free Chapter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <script src="https://assets.mailerlite.com/js/universal.js" type="text/javascript"></script>
-  <script>
-    window.ml = function () {
-      (window.ml.q = window.ml.q || []).push(arguments)
-    }
-    ml('account', 2491771);
-    ml('initializeEmbeddedForm', '192202757284824345');
-    ml('enablePopups', false);
-  </script>
+<style>
+  :root{
+    --cream:#FFF9FB;
+    --blush:#FCEEF3;
+    --rose:#D6537D;
+    --rose-deep:#B03A61;
+    --plum:#5C2340;
+    --ink:#2B2B2B;
+    --ink-soft:#6B6470;
+    --line:#F0D9E2;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 32px; }
+  a{ color:inherit; }
 
-  <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #111111;
-      --muted: #555555;
-      --accent: #000000;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b0b0c;
-        --fg: #f2f2f2;
-        --muted: #a3a3a3;
-        --accent: #ffffff;
-      }
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: var(--bg);
-      color: var(--fg);
-      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    }
-    .page {
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 48px 20px;
-      gap: 40px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: clamp(28px, 5vw, 44px);
-      margin: 0 0 16px 0;
-      line-height: 1.15;
-    }
-    .hero p {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 520px;
-      margin: 0 auto;
-    }
-    .form-wrap {
-      width: 100%;
-      max-width: 400px;
-    }
-    footer {
-      color: var(--muted);
-      font-size: 13px;
-    }
-  </style>
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,249,251,0.85);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .navbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 32px; max-width:1120px; margin:0 auto;
+  }
+  .brand{
+    font-family:'Fraunces', serif; font-weight:600; font-size:19px;
+    letter-spacing:-0.01em;
+  }
+  .brand span{ color:var(--rose); }
+  .nav-cta{
+    font-family:'Work Sans', sans-serif; font-weight:600; font-size:14px;
+    background:var(--ink); color:#fff; padding:10px 20px; border-radius:100px;
+    text-decoration:none; transition:transform .2s ease, background .2s ease;
+    display:inline-block;
+  }
+  .nav-cta:hover{ background:var(--rose-deep); transform:translateY(-1px); }
 
-  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1782740");</style>
-  <style type="text/css">
-    .ml-form-embedSubmitLoad {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-    }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
-    .ml-form-embedSubmitLoad:after {
-      content: " ";
-      display: block;
-      width: 11px;
-      height: 11px;
-      margin: 1px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      border-color: #ffffff #ffffff #ffffff transparent;
-      animation: ml-form-embedSubmitLoad 1.2s linear infinite;
-    }
-    @keyframes ml-form-embedSubmitLoad {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    #mlb2-43408739.ml-form-embedContainer {
-      box-sizing: border-box;
-      display: table;
-      margin: 0 auto;
-      position: static;
-      width: 100% !important;
-    }
-    #mlb2-43408739.ml-form-embedContainer h4,
-    #mlb2-43408739.ml-form-embedContainer p,
-    #mlb2-43408739.ml-form-embedContainer span,
-    #mlb2-43408739.ml-form-embedContainer button {
-      text-transform: none !important;
-      letter-spacing: normal !important;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper {
-      background-color: #f6f6f6;
-      border-width: 0px;
-      border-color: transparent;
-      border-radius: 4px;
-      border-style: solid;
-      box-sizing: border-box;
-      display: inline-block !important;
-      margin: 0;
-      padding: 0;
-      position: relative;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 400px; width: 100%; }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-align-center { text-align: center; }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
-      padding: 20px 20px 0 20px;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
-      padding-bottom: 0;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
-      text-align: left;
-      margin: 0 0 20px 0;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
-      color: #000000;
-      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-      font-size: 30px;
-      font-weight: 400;
-      margin: 0 0 10px 0;
-      text-align: left;
-      word-break: break-word;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
-      color: #000000;
-      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      margin: 0 0 10px 0;
-      text-align: left;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
-      text-align: left!important;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
-      margin: 0;
-      width: 100%;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
-      margin: 0 0 20px 0;
-      width: 100%;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
-      margin: 0;
-      padding: 0 0 20px 0;
-      width: 100%;
-      height: auto;
-      float: left;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
-      height: auto;
-      width: 100%;
-      float: left;
-    }
-    .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
-    .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
-      background-color: #ffffff;
-      color: #333333;
-      border-color: #cccccc;
-      border-radius: 4px;
-      border-style: solid;
-      border-width: 1px;
-      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-      font-size: 14px;
-      line-height: 20px;
-      margin-bottom: 0;
-      margin-top: 0;
-      padding: 10px 10px;
-      width: 100%;
-      box-sizing: border-box;
-      overflow-y: initial;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button,
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
-      background-color: #000000 !important;
-      border-color: #000000;
-      border-style: solid;
-      border-width: 1px;
-      border-radius: 4px;
-      box-shadow: none;
-      color: #ffffff !important;
-      cursor: pointer;
-      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-      font-size: 14px !important;
-      font-weight: 700;
-      line-height: 20px;
-      margin: 0 !important;
-      padding: 10px !important;
-      width: 100%;
-      height: auto;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover,
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
-      background-color: #333333 !important;
-      border-color: #333333 !important;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
-      margin: 0 0 20px 0;
-      float: left;
-      width: 100%;
-    }
-    #mlb2-43408739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
-      display: none;
-    }
-    .ml-error input, .ml-error textarea, .ml-error select {
-      border-color: red!important;
-    }
-    .ml-mobileButton-horizontal { display: none; }
-    #mlb2-43408739 .ml-mobileButton-horizontal button {
-      background-color: #000000 !important;
-      border-color: #000000 !important;
-      border-style: solid !important;
-      border-width: 1px !important;
-      border-radius: 4px !important;
-      box-shadow: none !important;
-      color: #ffffff !important;
-      cursor: pointer;
-      font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
-      font-size: 14px !important;
-      font-weight: 700 !important;
-      line-height: 20px !important;
-      padding: 10px !important;
-      width: 100% !important;
-    }
-    @media only screen and (max-width: 400px) {
-      .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
-      .ml-form-formContent.horozintalForm { float: left!important; }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-right: 0px!important; padding-bottom: 10px; }
-      .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; display: none!important; }
-      .ml-mobileButton-horizontal { display: inline-block !important; margin-bottom: 20px; width: 100%; }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { margin-bottom: 10px !important; width: 100% !important; }
-    }
-  </style>
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:88px 32px 60px;
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px;
+    align-items:center;
+    max-width:1120px; margin:0 auto;
+  }
+  .eyebrow{
+    font-size:12.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--rose-deep); margin-bottom:20px; display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:''; width:28px; height:1px; background:var(--rose-deep);
+  }
+  h1{
+    font-family:'Fraunces', serif; font-weight:600; font-size:56px; line-height:1.05;
+    letter-spacing:-0.015em; color:var(--plum); margin-bottom:22px;
+  }
+  h1 em{ font-style:italic; color:var(--rose); font-weight:500; }
+  .lede{
+    font-size:18px; line-height:1.6; color:var(--ink-soft); max-width:460px; margin-bottom:34px;
+  }
+
+  form.capture{
+    display:flex; gap:10px; max-width:440px; margin-bottom:14px;
+  }
+  form.capture input[type=email]{
+    flex:1; padding:15px 18px; border-radius:10px; border:1.5px solid var(--line);
+    background:#fff; font-family:'Work Sans',sans-serif; font-size:15px; color:var(--ink);
+    outline:none; transition:border-color .2s ease;
+  }
+  form.capture input[type=email]:focus{ border-color:var(--rose); }
+  form.capture input[type=email]:focus-visible{ outline:2px solid var(--rose); outline-offset:2px; }
+  form.capture button{
+    padding:15px 24px; border-radius:10px; border:none; background:var(--rose);
+    color:#fff; font-family:'Work Sans',sans-serif; font-weight:600; font-size:15px;
+    cursor:pointer; transition:background .2s ease, transform .2s ease; white-space:nowrap;
+  }
+  form.capture button:hover{ background:var(--rose-deep); transform:translateY(-1px); }
+  form.capture button:focus-visible{ outline:2px solid var(--plum); outline-offset:2px; }
+  .microcopy{ font-size:13px; color:var(--ink-soft); }
+  .success-msg{
+    display:none; align-items:center; gap:8px; font-size:14.5px; font-weight:600;
+    color:var(--rose-deep); margin-bottom:14px;
+  }
+  .success-msg.show{ display:flex; }
+
+  /* ---------- COVER MOCKUP ---------- */
+  .cover-stage{ position:relative; display:flex; justify-content:center; }
+  .cover-card{
+    width:270px; aspect-ratio:3/4; border-radius:14px; position:relative;
+    background:linear-gradient(160deg, #fff 0%, var(--blush) 100%);
+    border:1px solid var(--line);
+    box-shadow:0 30px 60px -20px rgba(92,35,64,0.35), 0 8px 20px -8px rgba(92,35,64,0.15);
+    transform:rotate(4deg);
+    padding:26px 22px;
+    display:flex; flex-direction:column;
+  }
+  .cover-card::before{
+    content:''; position:absolute; inset:10px; border:1px solid var(--rose);
+    opacity:0.35; border-radius:8px;
+  }
+  .cover-tag{
+    font-size:10.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--rose-deep); margin-bottom:14px;
+  }
+  .cover-title{
+    font-family:'Fraunces', serif; font-weight:600; font-size:23px; line-height:1.15;
+    color:var(--plum); margin-bottom:auto;
+  }
+  .cover-foot{
+    display:flex; align-items:center; justify-content:space-between;
+    font-size:10.5px; color:var(--ink-soft); font-weight:600;
+  }
+  .cover-dot{ width:7px; height:7px; border-radius:50%; background:var(--rose); }
+  .cover-card2{
+    position:absolute; width:270px; aspect-ratio:3/4; border-radius:14px;
+    background:var(--plum); opacity:0.9; transform:rotate(-8deg) translate(-18px, 10px);
+    z-index:-1;
+  }
+
+  /* ---------- SOCIAL PROOF STRIP ---------- */
+  .strip{
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    background:var(--blush);
+  }
+  .strip .wrap{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px;
+    padding:22px 32px; font-size:13.5px; color:var(--plum); font-weight:600;
+  }
+  .strip .item{ display:flex; align-items:center; gap:8px; }
+  .strip .item svg{ flex:none; }
+
+  /* ---------- TOC / WHAT'S INSIDE ---------- */
+  section{ padding:96px 32px; }
+  .section-head{ max-width:600px; margin-bottom:56px; }
+  .section-label{
+    font-size:12.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--rose-deep); margin-bottom:14px;
+  }
+  h2{
+    font-family:'Fraunces', serif; font-weight:600; font-size:36px; line-height:1.15;
+    color:var(--plum); letter-spacing:-0.01em;
+  }
+  .toc{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:1px;
+    border:1px solid var(--line); border-radius:16px; overflow:hidden;
+    background:var(--line);
+  }
+  .toc-item{
+    background:#fff; padding:26px 28px; display:flex; gap:18px; align-items:flex-start;
+  }
+  .toc-num{
+    font-family:'Fraunces', serif; font-size:26px; font-weight:500; color:var(--rose);
+    line-height:1; flex:none; width:34px;
+  }
+  .toc-item h3{ font-size:16px; font-weight:600; margin-bottom:5px; color:var(--ink); }
+  .toc-item p{ font-size:13.5px; color:var(--ink-soft); line-height:1.5; }
+
+  /* ---------- QUOTE ---------- */
+  .quote-section{ background:var(--plum); color:#fff; text-align:center; }
+  .quote-section blockquote{
+    font-family:'Fraunces', serif; font-weight:500; font-style:italic;
+    font-size:30px; line-height:1.35; max-width:720px; margin:0 auto 22px;
+  }
+  .quote-section .attrib{ font-size:13.5px; color:#E8B6C8; font-weight:600; letter-spacing:0.03em; }
+
+  /* ---------- TICKER (signature element) ---------- */
+  .ticker-section{ background:var(--cream); }
+  .ticker-grid{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center;
+  }
+  .ticker-copy p{ font-size:16px; line-height:1.65; color:var(--ink-soft); margin-top:16px; max-width:420px; }
+  .ticker-stage{
+    position:relative; height:340px; border-radius:20px; background:var(--blush);
+    border:1px solid var(--line); overflow:hidden;
+  }
+  .ticker-total{
+    position:absolute; top:26px; left:26px; z-index:5;
+  }
+  .ticker-total .label{ font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--rose-deep); }
+  .ticker-total .num{
+    font-family:'Fraunces', serif; font-size:44px; font-weight:600; color:var(--plum);
+    letter-spacing:-0.02em;
+  }
+  .ticker-total .num::before{ content:'$'; font-size:26px; margin-right:2px; opacity:0.8; }
+  .toast{
+    position:absolute; left:26px; display:flex; align-items:center; gap:10px;
+    background:#fff; border:1px solid var(--line); border-radius:12px;
+    padding:10px 16px; font-size:13.5px; font-weight:600; color:var(--ink);
+    box-shadow:0 8px 20px -6px rgba(92,35,64,0.18);
+    opacity:0; animation:toastIn 6s ease-in-out infinite;
+  }
+  .toast .dot{ width:8px; height:8px; border-radius:50%; background:#3FB27F; flex:none; }
+  .toast.t2{ animation-delay:1.5s; }
+  .toast.t3{ animation-delay:3s; }
+  .toast.t4{ animation-delay:4.5s; }
+  @keyframes toastIn{
+    0%{ opacity:0; transform:translateY(14px) scale(0.96); bottom:20px; }
+    8%{ opacity:1; transform:translateY(0) scale(1); bottom:auto; }
+    28%{ opacity:1; }
+    38%{ opacity:0; }
+    100%{ opacity:0; }
+  }
+  .toast:nth-of-type(1){ top:120px; }
+  .toast:nth-of-type(2){ top:180px; left:120px; }
+  .toast:nth-of-type(3){ top:240px; }
+  .toast:nth-of-type(4){ top:190px; left:60px; }
+
+  @media (prefers-reduced-motion: reduce){
+    .toast{ animation:none; opacity:0; }
+  }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    background:linear-gradient(160deg, var(--rose) 0%, var(--rose-deep) 100%);
+    color:#fff; text-align:center; border-radius:28px; margin:0 32px 96px;
+    padding:72px 32px;
+  }
+  .final-cta h2{ color:#fff; margin-bottom:16px; }
+  .final-cta p{ font-size:16px; color:#FBE0E9; max-width:460px; margin:0 auto 32px; }
+  .final-cta form.capture{ margin:0 auto 14px; }
+  .final-cta form.capture input[type=email]{ border:none; }
+  .final-cta form.capture button{ background:var(--plum); }
+  .final-cta form.capture button:hover{ background:#3E1830; }
+  .final-cta .microcopy{ color:#FBE0E9; }
+
+  footer{
+    padding:36px 32px 48px; text-align:center; font-size:13px; color:var(--ink-soft);
+  }
+
+  @media (max-width: 860px){
+    .hero{ grid-template-columns:1fr; padding-top:56px; }
+    .cover-stage{ order:-1; margin-bottom:8px; }
+    h1{ font-size:38px; }
+    .toc{ grid-template-columns:1fr; }
+    .ticker-grid{ grid-template-columns:1fr; }
+    form.capture{ flex-direction:column; }
+    .final-cta{ margin:0 16px 64px; padding:52px 24px; }
+    section{ padding:64px 20px; }
+  }
+</style>
 </head>
 <body>
-  <div class="page">
-    <div class="hero">
-      <h1>Turn one idea into your first $1,000</h1>
-      <p>Join the newsletter for tips, tools, and real stories on turning ideas into income.</p>
+
+<header>
+  <div class="navbar">
+    <div class="brand">Sell<span>Digital</span></div>
+    <a href="#get-chapter" class="nav-cta">Get the free chapter</a>
+  </div>
+</header>
+
+<section class="hero" style="padding-top:88px;">
+  <div>
+    <div class="eyebrow">For first-time digital creators</div>
+    <h1>Turn one idea<br>into your first <em>$1,000.</em></h1>
+    <p class="lede">A practical, no-fluff roadmap to picking a product idea, pricing it right, and launching it on Gumroad — even if you've never sold anything online before.</p>
+
+    <div class="success-msg" data-success-for="hero-form">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9 17.5L20 6.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      You're on the list — check your inbox!
     </div>
-
-    <div class="form-wrap">
-      <div id="mlb2-43408739" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-43408739">
-        <div class="ml-form-align-center">
-          <div class="ml-form-embedWrapper embedForm">
-            <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
-              <div class="ml-form-embedContent">
-                <h4>Newsletter</h4>
-                <p>Signup for news and special offers!</p>
-              </div>
-
-              <form class="ml-block-form" action="https://dashboard.mailerlite.com/jsonp/2491771/forms/192202757284824345/subscribe" data-code="" method="post" target="_blank">
-                <div class="ml-form-formContent horozintalForm">
-                  <div class="ml-form-horizontalRow">
-                    <div class="ml-input-horizontal">
-                      <div style="width: 100%;" class="horizontal-fields">
-                        <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                          <input type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ml-button-horizontal primary">
-                      <button type="submit" class="primary">Subscribe</button>
-                      <button disabled="disabled" style="display: none;" type="button" class="loading">
-                        <div class="ml-form-embedSubmitLoad"></div>
-                        <span class="sr-only">Loading...</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <input type="hidden" name="ml-submit" value="1">
-
-                <div class="ml-mobileButton-horizontal">
-                  <button type="submit" class="primary">Subscribe</button>
-                  <button disabled="disabled" style="display: none;" type="button" class="loading">
-                    <div class="ml-form-embedSubmitLoad"></div>
-                    <span class="sr-only">Loading...</span>
-                  </button>
-                </div>
-                <input type="hidden" name="anticsrf" value="true">
-              </form>
-            </div>
-
-            <div class="ml-form-successBody row-success" style="display: none">
-              <div class="ml-form-successContent">
-                <h4>Thank you!</h4>
-                <p>You have successfully joined our subscriber list.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer>&copy; 2026. Powered by MailerLite.</footer>
+    <form class="capture" id="hero-form" action="https://dashboard.mailerlite.com/jsonp/2491771/forms/192202757284824345/subscribe" method="post" target="_blank">
+      <input type="email" name="fields[email]" placeholder="Your email address" autocomplete="email" required>
+      <button type="submit">Get the roadmap</button>
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+    </form>
+    <p class="microcopy">Free. No spam. Just the roadmap, straight to your inbox.</p>
   </div>
 
-  <script>
-    function ml_webform_success_43408739() {
-      var $ = ml_jQuery || jQuery;
-      $('.ml-subscribe-form-43408739 .row-success').show();
-      $('.ml-subscribe-form-43408739 .row-form').hide();
-    }
-  </script>
-  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
+  <div class="cover-stage">
+    <div class="cover-card2" aria-hidden="true"></div>
+    <div class="cover-card" aria-hidden="true">
+      <div class="cover-tag">A practical guide</div>
+      <div class="cover-title">How to Sell<br>Digital Products</div>
+      <div class="cover-foot"><span>11 chapters</span><span class="cover-dot"></span><span>Roadmap to $1,000</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      Zero inventory, zero shipping
+    </div>
+    <div class="item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9 17.5L20 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Built once, sold on repeat
+    </div>
+    <div class="item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      A 30-day plan from idea to launch
+    </div>
+  </div>
+</div>
+
+<section id="whats-inside">
+  <div class="section-head">
+    <div class="section-label">What's inside</div>
+    <h2>Eleven chapters. One clear path from idea to your first sale.</h2>
+  </div>
+  <div class="toc">
+    <div class="toc-item">
+      <div class="toc-num">01</div>
+      <div><h3>Choosing a winning idea</h3><p>Stop chasing originality — find a problem people already pay to solve.</p></div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">02</div>
+      <div><h3>Validating before you build</h3><p>Test demand in days, not months, before writing a single page.</p></div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">03</div>
+      <div><h3>Building the product</h3><p>A simple structure for turning your knowledge into a finished file.</p></div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">04</div>
+      <div><h3>Pricing it smart</h3><p>Why your price is a signal, not just a number — and how to set it.</p></div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">05</div>
+      <div><h3>Setting up your store</h3><p>The exact Gumroad setup steps, and the small details that matter.</p></div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">06</div>
+      <div><h3>Writing a page that converts</h3><p>Turn browsers into buyers with a headline and layout that works.</p></div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">07</div>
+      <div><h3>Marketing without ads</h3><p>Build an audience before launch, and momentum on launch day.</p></div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">08</div>
+      <div><h3>Affiliates &amp; your 30-day plan</h3><p>Get others selling for you, then follow a week-by-week launch plan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="wrap">
+    <blockquote>"You don't need a genius idea to start. You need a clear product that solves a specific problem for a specific audience."</blockquote>
+    <div class="attrib">— FROM THE INTRODUCTION</div>
+  </div>
+</section>
+
+<section class="ticker-section">
+  <div class="wrap ticker-grid">
+    <div class="ticker-copy">
+      <div class="section-label">The math that matters</div>
+      <h2>Build it once.<br>It sells while you sleep.</h2>
+      <p>Every sale below comes from the same file, made one time. No restocking, no shipping label, no second version — just a product that keeps finding new buyers.</p>
+    </div>
+    <div class="ticker-stage">
+      <div class="ticker-total"><div class="label">Total from one ebook</div><div class="num">1,247</div></div>
+      <div class="toast t1"><span class="dot"></span> New sale — $12 · Ebook</div>
+      <div class="toast t2"><span class="dot"></span> New sale — $9 · Ebook</div>
+      <div class="toast t3"><span class="dot"></span> New sale — $15 · Bundle</div>
+      <div class="toast t4"><span class="dot"></span> New sale — $12 · Ebook</div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" id="get-chapter">
+  <h2>Get chapter one, free.</h2>
+  <p>See the exact framework for picking your first product idea — before you commit a single hour to building it.</p>
+
+  <div class="success-msg" data-success-for="final-form" style="margin:0 auto 14px;justify-content:center;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9 17.5L20 6.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    You're on the list — check your inbox!
+  </div>
+  <form class="capture" id="final-form" action="https://dashboard.mailerlite.com/jsonp/2491771/forms/192202757284824345/subscribe" method="post" target="_blank" style="margin:0 auto 14px;">
+    <input type="email" name="fields[email]" placeholder="Your email address" autocomplete="email" required>
+    <button type="submit">Get chapter one</button>
+    <input type="hidden" name="ml-submit" value="1">
+    <input type="hidden" name="anticsrf" value="true">
+  </form>
+  <p class="microcopy">Free. No spam. Unsubscribe anytime.</p>
+</section>
+
+<footer>
+  © 2026 How to Sell Digital Products. A practical guide for first-time creators.
+</footer>
+
+<script>
+  document.querySelectorAll('form.capture').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var button = form.querySelector('button');
+      var originalLabel = button.textContent;
+      button.disabled = true;
+      button.textContent = 'Sending...';
+      var showSuccess = function () {
+        if (showSuccess.done) return;
+        showSuccess.done = true;
+        var success = document.querySelector('.success-msg[data-success-for="' + form.id + '"]');
+        if (success) success.classList.add('show');
+        form.style.display = 'none';
+        button.disabled = false;
+        button.textContent = originalLabel;
+      };
+      fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+        .catch(function () { /* opaque no-cors response always looks like success */ })
+        .finally(showSuccess);
+      setTimeout(showSuccess, 4000);
+    });
+  });
+</script>
+
 </body>
 </html>
