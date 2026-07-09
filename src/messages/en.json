@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "newReleases": "New Releases",
+    "preOrders": "Pre-Orders",
+    "subscriptions": "Subscriptions",
+    "giftCards": "Gift Cards",
+    "signIn": "Sign in",
+    "createAccount": "Create account",
+    "signOut": "Sign out",
+    "searchPlaceholder": "Search games…"
+  },
+  "hero": {
+    "title": "Digital game keys, delivered <accent>the second you pay</accent>.",
+    "subtitle": "Unbeatable Xbox Series prices, gift cards, and subscriptions — shipped instantly to your inbox, anywhere in the world."
+  },
+  "common": {
+    "viewAll": "View all",
+    "emptyCategory": "No products in this category yet — check back soon.",
+    "releases": "Releases {date}"
+  },
+  "product": {
+    "preorder": "PRE-ORDER",
+    "regionOk": "This key activates in your location ({country}).",
+    "regionBlocked": "Warning: this key will NOT activate in your current location ({country}). Only buy it if you will redeem it on an account from the region shown above.",
+    "buyNow": "Buy now — coming soon",
+    "preorderSoon": "Pre-order — coming soon",
+    "outOfStock": "Out of stock",
+    "inStock": "{count} key(s) in stock · instant email delivery after payment",
+    "preorderStock": "Pre-order fulfillment is stocked at launch.",
+    "releasesOn": "Releases {date} — key delivered automatically at launch.",
+    "countdown": "Releases in",
+    "days": "days",
+    "hours": "hrs",
+    "minutes": "min",
+    "seconds": "sec"
+  },
+  "search": {
+    "title": "Search results for “{query}”",
+    "none": "Nothing found for “{query}”. Try a different search."
+  },
+  "auth": {
+    "signInTitle": "Sign in",
+    "signUpTitle": "Create your account",
+    "name": "Name (optional)",
+    "email": "Email",
+    "password": "Password (min 8 characters)",
+    "signInButton": "Sign in",
+    "signUpButton": "Create account",
+    "wait": "Please wait…",
+    "invalid": "Invalid email or password.",
+    "registerFailed": "Registration failed.",
+    "noAccount": "No account yet?",
+    "createOne": "Create one",
+    "haveAccount": "Already registered?",
+    "signInLink": "Sign in"
+  },
+  "account": {
+    "title": "My account",
+    "email": "Email",
+    "name": "Name",
+    "memberSince": "Member since",
+    "location": "Detected location",
+    "ordersComing": "Your orders and game keys will appear here once checkout goes live (Phase 3)."
+  },
+  "footer": {
+    "line": "© {year} GameVault. Instant digital delivery, worldwide."
+  }
+}

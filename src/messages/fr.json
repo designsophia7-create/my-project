@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "newReleases": "Nouveautés",
+    "preOrders": "Précommandes",
+    "subscriptions": "Abonnements",
+    "giftCards": "Cartes cadeaux",
+    "signIn": "Connexion",
+    "createAccount": "Créer un compte",
+    "signOut": "Déconnexion",
+    "searchPlaceholder": "Rechercher des jeux…"
+  },
+  "hero": {
+    "title": "Des clés de jeux numériques, livrées <accent>à la seconde où vous payez</accent>.",
+    "subtitle": "Prix Xbox Series imbattables, cartes cadeaux et abonnements — envoyés instantanément dans votre boîte mail, partout dans le monde."
+  },
+  "common": {
+    "viewAll": "Voir tout",
+    "emptyCategory": "Aucun produit dans cette catégorie pour l'instant — revenez bientôt.",
+    "releases": "Sortie le {date}"
+  },
+  "product": {
+    "preorder": "PRÉCOMMANDE",
+    "regionOk": "Cette clé s'active dans votre région ({country}).",
+    "regionBlocked": "Attention : cette clé ne s'activera PAS depuis votre position actuelle ({country}). Ne l'achetez que si vous la rachèterez sur un compte de la région indiquée ci-dessus.",
+    "buyNow": "Acheter — bientôt disponible",
+    "preorderSoon": "Précommander — bientôt disponible",
+    "outOfStock": "Rupture de stock",
+    "inStock": "{count} clé(s) en stock · livraison instantanée par e-mail après paiement",
+    "preorderStock": "Les précommandes sont approvisionnées au lancement.",
+    "releasesOn": "Sortie le {date} — clé livrée automatiquement au lancement.",
+    "countdown": "Sortie dans",
+    "days": "jours",
+    "hours": "h",
+    "minutes": "min",
+    "seconds": "s"
+  },
+  "search": {
+    "title": "Résultats pour « {query} »",
+    "none": "Aucun résultat pour « {query} ». Essayez une autre recherche."
+  },
+  "auth": {
+    "signInTitle": "Connexion",
+    "signUpTitle": "Créer votre compte",
+    "name": "Nom (facultatif)",
+    "email": "E-mail",
+    "password": "Mot de passe (8 caractères min.)",
+    "signInButton": "Se connecter",
+    "signUpButton": "Créer un compte",
+    "wait": "Veuillez patienter…",
+    "invalid": "E-mail ou mot de passe invalide.",
+    "registerFailed": "Échec de l'inscription.",
+    "noAccount": "Pas encore de compte ?",
+    "createOne": "Créer un compte",
+    "haveAccount": "Déjà inscrit ?",
+    "signInLink": "Se connecter"
+  },
+  "account": {
+    "title": "Mon compte",
+    "email": "E-mail",
+    "name": "Nom",
+    "memberSince": "Membre depuis",
+    "location": "Position détectée",
+    "ordersComing": "Vos commandes et clés de jeux apparaîtront ici dès que le paiement sera actif (Phase 3)."
+  },
+  "footer": {
+    "line": "© {year} GameVault. Livraison numérique instantanée, dans le monde entier."
+  }
+}

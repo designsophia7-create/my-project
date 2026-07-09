@@ -1,11 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { signIn } from 'next-auth/react'
-import Link from 'next/link'
+import { Link, useRouter } from '@/i18n/navigation'
 
 export function AuthForm({ mode }: { mode: 'sign-in' | 'sign-up' }) {
+  const t = useTranslations('auth')
   const router = useRouter()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -26,13 +27,13 @@ export function AuthForm({ mode }: { mode: 'sign-in' | 'sign-up' }) {
         })
         if (!res.ok) {
           const data = await res.json().catch(() => null)
-          setError(data?.error ?? 'Registration failed.')
+          setError(data?.error ?? t('registerFailed'))
           return
         }
       }
       const result = await signIn('credentials', { email, password, redirect: false })
       if (result?.error) {
-        setError('Invalid email or password.')
+        setError(t('invalid'))
         return
       }
       router.push('/account')
@@ -42,37 +43,40 @@ export function AuthForm({ mode }: { mode: 'sign-in' | 'sign-up' }) {
     }
   }
 
+  const inputClasses =
+    'w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-white placeholder-zinc-500 focus:border-violet-500 focus:outline-none'
+
   return (
     <div className="mx-auto max-w-sm">
       <h1 className="mb-6 text-2xl font-bold text-white">
-        {mode === 'sign-in' ? 'Sign in' : 'Create your account'}
+        {mode === 'sign-in' ? t('signInTitle') : t('signUpTitle')}
       </h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         {mode === 'sign-up' && (
           <input
             type="text"
-            placeholder="Name (optional)"
+            placeholder={t('name')}
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-white placeholder-zinc-500 focus:border-violet-500 focus:outline-none"
+            className={inputClasses}
           />
         )}
         <input
           type="email"
           required
-          placeholder="Email"
+          placeholder={t('email')}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-white placeholder-zinc-500 focus:border-violet-500 focus:outline-none"
+          className={inputClasses}
         />
         <input
           type="password"
           required
           minLength={8}
-          placeholder="Password (min 8 characters)"
+          placeholder={t('password')}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-white placeholder-zinc-500 focus:border-violet-500 focus:outline-none"
+          className={inputClasses}
         />
         {error && <p className="text-sm text-red-400">{error}</p>}
         <button
@@ -80,22 +84,22 @@ export function AuthForm({ mode }: { mode: 'sign-in' | 'sign-up' }) {
           disabled={busy}
           className="w-full rounded-lg bg-violet-600 py-2 font-semibold text-white transition hover:bg-violet-500 disabled:opacity-50"
         >
-          {busy ? 'Please wait…' : mode === 'sign-in' ? 'Sign in' : 'Create account'}
+          {busy ? t('wait') : mode === 'sign-in' ? t('signInButton') : t('signUpButton')}
         </button>
       </form>
       <p className="mt-4 text-sm text-zinc-500">
         {mode === 'sign-in' ? (
           <>
-            No account yet?{' '}
+            {t('noAccount')}{' '}
             <Link href="/sign-up" className="text-violet-400 hover:text-violet-300">
-              Create one
+              {t('createOne')}
             </Link>
           </>
         ) : (
           <>
-            Already registered?{' '}
+            {t('haveAccount')}{' '}
             <Link href="/sign-in" className="text-violet-400 hover:text-violet-300">
-              Sign in
+              {t('signInLink')}
             </Link>
           </>
         )}

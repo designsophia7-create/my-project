@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "newReleases": "Neuerscheinungen",
+    "preOrders": "Vorbestellungen",
+    "subscriptions": "Abonnements",
+    "giftCards": "Geschenkkarten",
+    "signIn": "Anmelden",
+    "createAccount": "Konto erstellen",
+    "signOut": "Abmelden",
+    "searchPlaceholder": "Spiele suchen…"
+  },
+  "hero": {
+    "title": "Digitale Game-Keys, geliefert <accent>in der Sekunde deiner Zahlung</accent>.",
+    "subtitle": "Unschlagbare Xbox-Series-Preise, Geschenkkarten und Abos — sofort in dein Postfach, weltweit."
+  },
+  "common": {
+    "viewAll": "Alle ansehen",
+    "emptyCategory": "Noch keine Produkte in dieser Kategorie — schau bald wieder vorbei.",
+    "releases": "Erscheint am {date}"
+  },
+  "product": {
+    "preorder": "VORBESTELLUNG",
+    "regionOk": "Dieser Key ist an deinem Standort ({country}) aktivierbar.",
+    "regionBlocked": "Achtung: Dieser Key lässt sich an deinem aktuellen Standort ({country}) NICHT aktivieren. Kaufe ihn nur, wenn du ihn mit einem Konto aus der oben angezeigten Region einlöst.",
+    "buyNow": "Jetzt kaufen — bald verfügbar",
+    "preorderSoon": "Vorbestellen — bald verfügbar",
+    "outOfStock": "Ausverkauft",
+    "inStock": "{count} Key(s) auf Lager · sofortige E-Mail-Lieferung nach Zahlung",
+    "preorderStock": "Vorbestellungen werden zum Release beliefert.",
+    "releasesOn": "Erscheint am {date} — Key wird zum Launch automatisch geliefert.",
+    "countdown": "Erscheint in",
+    "days": "Tage",
+    "hours": "Std",
+    "minutes": "Min",
+    "seconds": "Sek"
+  },
+  "search": {
+    "title": "Suchergebnisse für „{query}“",
+    "none": "Nichts gefunden für „{query}“. Versuche eine andere Suche."
+  },
+  "auth": {
+    "signInTitle": "Anmelden",
+    "signUpTitle": "Konto erstellen",
+    "name": "Name (optional)",
+    "email": "E-Mail",
+    "password": "Passwort (mind. 8 Zeichen)",
+    "signInButton": "Anmelden",
+    "signUpButton": "Konto erstellen",
+    "wait": "Bitte warten…",
+    "invalid": "E-Mail oder Passwort ungültig.",
+    "registerFailed": "Registrierung fehlgeschlagen.",
+    "noAccount": "Noch kein Konto?",
+    "createOne": "Jetzt erstellen",
+    "haveAccount": "Bereits registriert?",
+    "signInLink": "Anmelden"
+  },
+  "account": {
+    "title": "Mein Konto",
+    "email": "E-Mail",
+    "name": "Name",
+    "memberSince": "Mitglied seit",
+    "location": "Erkannter Standort",
+    "ordersComing": "Deine Bestellungen und Game-Keys erscheinen hier, sobald der Checkout live ist (Phase 3)."
+  },
+  "footer": {
+    "line": "© {year} GameVault. Sofortige digitale Lieferung, weltweit."
+  }
+}

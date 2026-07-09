@@ -1,6 +1,7 @@
-import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
+import { Link } from '@/i18n/navigation'
 import { RegionBadge } from './RegionBadge'
-import { formatPriceUsd } from '@/lib/format'
+import { displayPrice, type Currency } from '@/lib/currency'
 import type { RegionLock, Platform } from '@/generated/prisma/enums'
 
 const PLATFORM_LABELS: Record<Platform, string> = {
@@ -17,15 +18,47 @@ export type ProductCardData = {
   title: string
   platform: Platform
   regionLock: RegionLock
-  basePriceUsd: string
-  compareAtPriceUsd: string | null
+  price: string
+  compareAt: string | null
+  discountPct: number | null
+  releaseDate: Date | null
+  locale: string
+}
+
+type RawProduct = {
+  slug: string
+  title: string
+  platform: Platform
+  regionLock: RegionLock
+  basePriceUsd: { toString(): string }
+  compareAtPriceUsd: { toString(): string } | null
   releaseDate: Date | null
 }
 
-export function ProductCard({ product }: { product: ProductCardData }) {
-  const discount =
-    product.compareAtPriceUsd &&
-    Math.round((1 - Number(product.basePriceUsd) / Number(product.compareAtPriceUsd)) * 100)
+export function toCardData(
+  p: RawProduct,
+  currency: Currency,
+  rates: Record<Currency, number>,
+  locale: string,
+): ProductCardData {
+  const base = Number(p.basePriceUsd.toString())
+  const compare = p.compareAtPriceUsd ? Number(p.compareAtPriceUsd.toString()) : null
+  return {
+    slug: p.slug,
+    title: p.title,
+    platform: p.platform,
+    regionLock: p.regionLock,
+    price: displayPrice(base, currency, rates, locale),
+    compareAt: compare ? displayPrice(compare, currency, rates, locale) : null,
+    discountPct: compare ? Math.round((1 - base / compare) * 100) : null,
+    releaseDate: p.releaseDate,
+    locale,
+  }
+}
+
+export async function ProductCard({ product }: { product: ProductCardData }) {
+  const t = await getTranslations('common')
+  const upcoming = product.releaseDate && product.releaseDate > new Date()
 
   return (
     <Link
@@ -36,31 +69,33 @@ export function ProductCard({ product }: { product: ProductCardData }) {
         <span className="px-4 text-center text-lg font-bold text-zinc-300 opacity-60 transition group-hover:opacity-90">
           {product.title.split('—')[0].trim()}
         </span>
-        {discount ? (
+        {product.discountPct ? (
           <span className="absolute left-2 top-2 rounded-md bg-emerald-500 px-1.5 py-0.5 text-xs font-bold text-zinc-950">
-            -{discount}%
+            -{product.discountPct}%
           </span>
         ) : null}
       </div>
       <div className="flex flex-1 flex-col gap-2 p-4">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="text-sm font-semibold leading-snug text-zinc-100">{product.title}</h3>
-        </div>
+        <h3 className="text-sm font-semibold leading-snug text-zinc-100">{product.title}</h3>
         <p className="text-xs text-zinc-500">{PLATFORM_LABELS[product.platform]}</p>
         <div className="mt-auto flex items-center justify-between">
           <div className="flex items-baseline gap-2">
-            <span className="text-lg font-bold text-white">{formatPriceUsd(product.basePriceUsd)}</span>
-            {product.compareAtPriceUsd && (
-              <span className="text-xs text-zinc-500 line-through">
-                {formatPriceUsd(product.compareAtPriceUsd)}
-              </span>
+            <span className="text-lg font-bold text-white">{product.price}</span>
+            {product.compareAt && (
+              <span className="text-xs text-zinc-500 line-through">{product.compareAt}</span>
             )}
           </div>
           <RegionBadge region={product.regionLock} />
         </div>
-        {product.releaseDate && product.releaseDate > new Date() && (
+        {upcoming && (
           <p className="text-xs font-medium text-violet-400">
-            Releases {product.releaseDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+            {t('releases', {
+              date: product.releaseDate!.toLocaleDateString(product.locale, {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+              }),
+            })}
           </p>
         )}
       </div>

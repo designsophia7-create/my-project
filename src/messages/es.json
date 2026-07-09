@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "newReleases": "Novedades",
+    "preOrders": "Reservas",
+    "subscriptions": "Suscripciones",
+    "giftCards": "Tarjetas regalo",
+    "signIn": "Iniciar sesión",
+    "createAccount": "Crear cuenta",
+    "signOut": "Cerrar sesión",
+    "searchPlaceholder": "Buscar juegos…"
+  },
+  "hero": {
+    "title": "Claves digitales de juegos, entregadas <accent>en el segundo en que pagas</accent>.",
+    "subtitle": "Precios imbatibles de Xbox Series, tarjetas regalo y suscripciones — enviados al instante a tu correo, en cualquier parte del mundo."
+  },
+  "common": {
+    "viewAll": "Ver todo",
+    "emptyCategory": "Aún no hay productos en esta categoría — vuelve pronto.",
+    "releases": "Sale el {date}"
+  },
+  "product": {
+    "preorder": "RESERVA",
+    "regionOk": "Esta clave se activa en tu ubicación ({country}).",
+    "regionBlocked": "Atención: esta clave NO se activará en tu ubicación actual ({country}). Cómprala solo si vas a canjearla en una cuenta de la región indicada arriba.",
+    "buyNow": "Comprar — próximamente",
+    "preorderSoon": "Reservar — próximamente",
+    "outOfStock": "Agotado",
+    "inStock": "{count} clave(s) en stock · entrega instantánea por correo tras el pago",
+    "preorderStock": "Las reservas se surten en el lanzamiento.",
+    "releasesOn": "Sale el {date} — clave entregada automáticamente en el lanzamiento.",
+    "countdown": "Sale en",
+    "days": "días",
+    "hours": "h",
+    "minutes": "min",
+    "seconds": "s"
+  },
+  "search": {
+    "title": "Resultados para «{query}»",
+    "none": "No se encontró nada para «{query}». Prueba otra búsqueda."
+  },
+  "auth": {
+    "signInTitle": "Iniciar sesión",
+    "signUpTitle": "Crea tu cuenta",
+    "name": "Nombre (opcional)",
+    "email": "Correo electrónico",
+    "password": "Contraseña (mín. 8 caracteres)",
+    "signInButton": "Iniciar sesión",
+    "signUpButton": "Crear cuenta",
+    "wait": "Espera…",
+    "invalid": "Correo o contraseña no válidos.",
+    "registerFailed": "Error en el registro.",
+    "noAccount": "¿Aún no tienes cuenta?",
+    "createOne": "Crear una",
+    "haveAccount": "¿Ya estás registrado?",
+    "signInLink": "Iniciar sesión"
+  },
+  "account": {
+    "title": "Mi cuenta",
+    "email": "Correo electrónico",
+    "name": "Nombre",
+    "memberSince": "Miembro desde",
+    "location": "Ubicación detectada",
+    "ordersComing": "Tus pedidos y claves de juego aparecerán aquí cuando el pago esté activo (Fase 3)."
+  },
+  "footer": {
+    "line": "© {year} GameVault. Entrega digital instantánea, en todo el mundo."
+  }
+}
